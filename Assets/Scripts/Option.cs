@@ -10,15 +10,13 @@ public class Option : MonoBehaviour
         {
             if (quiz.options[i] == gameObject)
             {
-                //jogador acertou
+                //Verifica se jogador acertou a pergunta
                 if (GameManager.Instance.questions[quiz.activeQuestion].Resposta == i)
                 {
                     GameManager.Instance.pontos++;
                     GameManager.Instance.sucess = true;
                 }
-
-                // Passa para próxima questão
-                quiz.activeQuestion++;
+                else GameManager.Instance.sucess = false;
 
                 //Transposição da tela de perguntas para tela de resposta
                 GameManager.Instance.QuizScreen.SetActive(false);

@@ -10,7 +10,7 @@ public class Quiz : MonoBehaviour
     [NonSerialized]
     public int activeQuestion; //id da questão ativa no momento
 
-    //Chamado quando a janela é ativada
+    //Chamado quando o objeto é ativado na tela
     private void OnEnable()
     {
         // Exibe a questão ativa no momento e todas as alternativas disponíveis

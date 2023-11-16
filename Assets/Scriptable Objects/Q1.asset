@@ -16,6 +16,7 @@ MonoBehaviour:
   Options:
   - Branco
   - Preto
-  - Marrom
+  - Cor de burro quando foge
   - "Branco \xE9 o nome do cavalo"
   Resposta: 1
+  Dica: "A ultima op\xE7\xE3o \xE9 verdadeira!"

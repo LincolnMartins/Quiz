@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,11 +24,7 @@ public class GameManager : MonoBehaviour
     //Chamado quando o objeto é carregado na cena
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-            Destroy(gameObject);
-        else Instance = this;
-
-        DontDestroyOnLoad(gameObject);
+        Instance = this;
     }
 
     // Função chamada quando se clica no botão 'Começar' na tela de inicio
@@ -38,12 +33,5 @@ public class GameManager : MonoBehaviour
         //Transposição da tela de inicio para tela da perguntas
         StartScreen.SetActive(false);
         QuizScreen.SetActive(true);
-    }
-
-    // Função chamada quando se clica no botão 'Menu' na tela de resposta
-    public void OnClickMenu()
-    {
-        //Reinicia o jogo
-        SceneManager.LoadScene(0);
     }
 }
